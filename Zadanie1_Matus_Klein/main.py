@@ -2,10 +2,7 @@ from sip import *
 import sip
 
 def run_proxy():
-    logging.basicConfig(format='%(asctime)s:%(levelname)s:%(message)s')
-    logging.basicConfig(filename='proxy.log')
-    logging.basicConfig(level=logging.INFO)
-    logging.basicConfig(datefmt='%H:%M:%S')
+    logging.basicConfig(format='%(asctime)s:%(levelname)s:%(message)s', filename='proxy.log', level=logging.INFO, datefmt='%H:%M:%S')
     logging.info(time.strftime("%a, %d %b %Y %H:%M:%S ", time.localtime()))
     hostname = socket.gethostname()
     logging.info(hostname)
